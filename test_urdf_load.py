@@ -47,6 +47,7 @@ for frame_id, frame in enumerate(model.frames):
 
 # 设置随机关节角度以便可视化
 q = pin.randomConfiguration(model)
+q = np.zeros_like(q)
 
 # 计算前向运动学
 pin.forwardKinematics(model, data, q)
